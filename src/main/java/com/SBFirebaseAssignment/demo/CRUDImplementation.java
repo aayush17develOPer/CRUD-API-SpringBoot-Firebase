@@ -32,7 +32,7 @@ public class CRUDImplementation {
 
     public String updateStudent(Student student, String id){
         Firestore db = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = db.collection("assignment1").document(student.getId()).set(student);
+        ApiFuture<WriteResult> collectionsApiFuture = db.collection("assignment1").document(id).set(student);
         return "Updated successfully!";
     }
 
